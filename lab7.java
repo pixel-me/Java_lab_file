@@ -10,7 +10,7 @@ public class lab7 {
         num = sc.nextInt();
         sc.close();
         try {
-            for (int i = 2; i * i <= num; i++) {
+            for (int i = 2; i * i <= num; i++) {  //O(sqrt(n))
                 if (num % i == 0) {
                   throw new MyException("not the prime number");
                 }
