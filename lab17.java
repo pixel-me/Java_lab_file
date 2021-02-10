@@ -23,7 +23,7 @@ class employee{
 
     }
 
-    class mysalaryComparator implements Comparator<employee>
+    class mission implements Comparator<employee>
     {
         public int compare(employee s1, employee s2)
         {
@@ -36,7 +36,7 @@ class employee{
         public static void main (String[] args){
 
 
-            TreeSet<employee> set = new TreeSet<>(new mysalaryComparator());
+            TreeSet<employee> set = new TreeSet<>(new mission());
 
             set.add(new employee(44450,"Ghanshyam"));
             set.add(new employee(34841,"Ashutosh"));
@@ -49,8 +49,6 @@ class employee{
             {
                 System.out.println(ele.getName()+" "+ele.getMarks());
             }
-
-
 
         }
     }
