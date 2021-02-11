@@ -2,33 +2,33 @@ package com.company;
 
 import java.util.LinkedList;
 
-public class lab14 {
-    public LinkedList<Video> videoList = new LinkedList<>();
-    public lab14(){
-        addVideo("a");
-        addVideo("b");
-        addVideo("c");
+class Address {
+    private final String name;
+    private final String street;
+    private final String city;
+    private final String state;
+    private final String code;
+    Address(String n, String s, String c, String st, String cd) {
+        name = n;
+        street = s;
+        city = c;
+        state = st;
+        code = cd;
     }
-    private void addVideo(String o){
-        Video vid = new Video(o);
-        videoList.add(vid);
+    public String toString() {
+        return name + " " + street + " " + city + " " + state + " " + code;
     }
 }
 
-class Video {
+public class lab14 {
+    public static void main(String[] args) {
+        LinkedList<Address> ml = new LinkedList<>();
 
-    public static Object title;
-    public static boolean isRent;
+        ml.add(new Address("A", "11 Ave", "U", "IL", "11111"));
+        ml.add(new Address("R", "11 Lane", "M", "IL", "22222"));
+        ml.add(new Address("T", "8 St", "C", "IL", "33333"));
 
-    public Video(String t){
-        title = t;
-        isRent = false;
-    }
-    public static void setisRent(boolean bool){
-        isRent = bool;
-    }
-
-    public String toString(){
-        return title.toString();
+        for (Address element : ml)
+            System.out.println(element + "\n");
     }
 }
